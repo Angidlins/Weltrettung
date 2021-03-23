@@ -1,0 +1,36 @@
+﻿@model WeltrettungAuftrag.Models.Aggressor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h3>Details</h3>
+
+<div>
+    <h4>Aggressor</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Spitzname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Spitzname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Spezialitaet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Spezialitaet)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AggressorId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

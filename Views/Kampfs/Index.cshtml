@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WeltrettungAuftrag.Models.Kampf>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h4>Kampfs Liste</h4>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Kampfbezeichnung)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aggressor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Held)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kampfbezeichnung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aggressor.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Held.Nachname)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.KampfId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.KampfId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.KampfId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Weltenrettung</title>
+    <style>
+        #eins {
+            background-size: auto;
+            background-image: url('../image/4529703_4529703_xl.jpg');
+            background-repeat: no-repeat;
+            color:indigo;
+            font-weight:600;
+            }
+        #zwei {
+            color:magenta;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body id="eins">
+    <div>
+        <h3>Willkommen Weltenretter</h3>
+        <h5>Schön, daß Du Dir die Zeit nimmst</h5>
+        <p class="body-content">Wenn Du Dich berufen fühlst, kicke einfach auf den  <a id="zwei" asp-controller="Helds" asp-action="Create">jetzt die Welt retten</a> und trage Dich in die Liste ein. </p>
+        <p class="body-content"> Du wirst séhen, Du bist nicht allein. Wir sehen uns ...</p>
+    </div> 
+</body>
+</html>

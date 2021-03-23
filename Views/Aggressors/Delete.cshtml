@@ -1,0 +1,39 @@
+﻿@model WeltrettungAuftrag.Models.Aggressor
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h5>Are you sure you want to delete this?</h5>
+<div>
+    <h4>Aggressor</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Spitzname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Spitzname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Spezialitaet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Spezialitaet)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="AggressorId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
